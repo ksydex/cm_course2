@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
 
     private Animator anim;
+    
+    private static readonly int IsRunning = Animator.StringToHash("isRunning");
+    private static readonly int TakeOf = Animator.StringToHash("takeOf");
+    private static readonly int IsJumping = Animator.StringToHash("isJumping");
 
     private void Start()
     {
@@ -34,9 +38,9 @@ public class PlayerController : MonoBehaviour
         else if (facingRight == true && moveInput < 0)
             Flip();
         if (moveInput == 0)
-            anim.SetBool("isRunning", false);
+            anim.SetBool(IsRunning, false);
         else
-            anim.SetBool("isRunning", true);
+            anim.SetBool(IsRunning, true);
     }
 
     private void Update()
@@ -46,13 +50,13 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         { 
             rb.velocity = Vector2.up * junpForce;
-            anim.SetTrigger("takeOf");
+            anim.SetTrigger(TakeOf);
         }
 
         if (isGrounded == true)
-            anim.SetBool("isJumping", false);
+            anim.SetBool(IsJumping, false);
         else
-            anim.SetBool("isJumping", true);
+            anim.SetBool(IsJumping, true);
     }
 
     void Flip()
