@@ -14,8 +14,11 @@ public class Slot : MonoBehaviour
 
     private void Update()
     {
-        if (transform.childCount <= 0)
-            inventory.isFull[index] = false;
+        if (transform.childCount <= 0 && inventory.isFull[index] != null)
+        {
+            inventory.isFull[index] = null;
+            inventory.OnChange();
+        }
     }
 
     public void DropItem()
@@ -23,7 +26,7 @@ public class Slot : MonoBehaviour
         foreach (Transform child in transform)
         {
             child.GetComponent<Spawn>().SpawnDroppedItem();
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
 }

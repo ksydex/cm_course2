@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public static class Keys
+    {
+        public const string Apple = "apple";
+        public const string Smile = "smile";
+    }
+
+
     private Inventory inventory;
     public GameObject slotButton;
+    public string key;
 
     private void Start()
     {
@@ -18,15 +26,16 @@ public class Pickup : MonoBehaviour
         {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
-                if (inventory.isFull[i] == false)
+                if (inventory.isFull[i] == null)
                 {
-                    inventory.isFull[i] = true;
+                    inventory.isFull[i] = key;
                     Instantiate(slotButton, inventory.slots[i].transform);
                     Destroy(gameObject);
                     break;
                 }
-
             }
-        } 
+
+            inventory.OnChange();
+        }
     }
 }
