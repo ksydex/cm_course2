@@ -23,19 +23,19 @@ public class LevelEndController : MonoBehaviour
         if (timeToWin > 0 && ResultsManager.current?.Result == null)
         {
             timeToWin -= Time.deltaTime;
-            if (timeToWin <= 0) OnPlayerCollision();
+            if (timeToWin <= 0) OnPlayerCollision(true);
         }
     }
 
-    public void OnPlayerCollision()
+    public void OnPlayerCollision(bool ignoreSuccess = false)
     {
         var isSuccess = levelController.IsMissionSucceeded();
+        if (isSuccess && ignoreSuccess) return;
+
         if (isSuccess)
         {
             if (levelController.nextLevelSceneName != "")
-            {
                 SceneManager.LoadScene(levelController.nextLevelSceneName);
-            }
         }
         else
         {
