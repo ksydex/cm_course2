@@ -26,7 +26,7 @@ public class Pickup : MonoBehaviour
         {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
-                if (inventory.isFull[i] == null)
+                if (string.IsNullOrEmpty(inventory.isFull[i]))
                 {
                     inventory.isFull[i] = key;
                     Instantiate(slotButton, inventory.slots[i].transform);

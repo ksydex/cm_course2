@@ -17,11 +17,17 @@ public class LevelEndController : MonoBehaviour
 
     public void OnPlayerCollision()
     {
+        Debug.Log("xcxxzczczxczxczxc");
         var isSuccess = levelController.IsMissionSucceeded(); 
+        Debug.Log(isSuccess);
         if (isSuccess)
         {
-            if (levelController.nextLevelSceneName != null)
+            Debug.Log("success");
+            if (levelController.nextLevelSceneName != "")
+            {
+                Debug.Log("new elvel");
                 SceneManager.LoadScene(levelController.nextLevelSceneName);
+            }
             else
             {
                 // show UI

@@ -1120,7 +1120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7399080175399208015, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.21
+      value: 10.69
       objectReference: {fileID: 0}
     - target: {fileID: 7399080175399208015, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2088,6 +2088,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1334077869}
+    - target: {fileID: 7517877954607669842, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
+      propertyPath: nextLevelSceneName
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 8912606528785961585, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
       propertyPath: m_RootOrder
       value: 1
