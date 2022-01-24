@@ -1097,6 +1097,10 @@ PrefabInstance:
       propertyPath: key
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: -8196914835979137971, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e157d8c7fe1c3c64c912271f5c63885f, type: 3}
     - target: {fileID: 1207975498766306953, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1656,6 +1660,10 @@ PrefabInstance:
       propertyPath: key
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: -8196914835979137971, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e157d8c7fe1c3c64c912271f5c63885f, type: 3}
     - target: {fileID: 1207975498766306953, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1948,6 +1956,10 @@ PrefabInstance:
       propertyPath: key
       value: smile
       objectReference: {fileID: 0}
+    - target: {fileID: -7373894644820920987, guid: 3d7266d474413a049bb0a9e9ca0cc4cb, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e157d8c7fe1c3c64c912271f5c63885f, type: 3}
     - target: {fileID: 4218047029152593800, guid: 3d7266d474413a049bb0a9e9ca0cc4cb, type: 3}
       propertyPath: m_Name
       value: smile
@@ -2151,6 +2163,10 @@ PrefabInstance:
       propertyPath: key
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: -8196914835979137971, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e157d8c7fe1c3c64c912271f5c63885f, type: 3}
     - target: {fileID: 1207975498766306953, guid: 6f1cdb5502ad6a64dbf6dc26a5020e89, type: 3}
       propertyPath: m_Enabled
       value: 1

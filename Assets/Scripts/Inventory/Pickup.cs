@@ -10,7 +10,7 @@ public class Pickup : MonoBehaviour
         public const string Smile = "smile";
     }
 
-
+    public AudioClip audioClip;
     private Inventory inventory;
     public GameObject slotButton;
     public string key;
@@ -31,6 +31,10 @@ public class Pickup : MonoBehaviour
                     inventory.isFull[i] = key;
                     Instantiate(slotButton, inventory.slots[i].transform);
                     Destroy(gameObject);
+
+                    var audioSource = other.gameObject.AddComponent<AudioSource>();
+                    audioSource.PlayOneShot(audioClip, 0.5f);
+
                     break;
                 }
             }
