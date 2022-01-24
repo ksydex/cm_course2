@@ -6,7 +6,7 @@ using Models;
 public class ResultsManager
 {
     public static ResultsManager instance = new ResultsManager();
-    [CanBeNull] public static UserResult current;
+    [CanBeNull] public static UserResult current = new UserResult();
 
     public readonly List<UserResult> results = new List<UserResult>();
 

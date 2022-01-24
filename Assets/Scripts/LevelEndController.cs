@@ -9,29 +9,38 @@ public class LevelEndController : MonoBehaviour
 {
     public LevelControllerBase levelController;
 
-    public void OnTriggerEnter2D(Collider2D other)
+    protected float timeToWin = 20.0f;
+
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
             OnPlayerCollision();
     }
 
+    private void Update()
+    {
+        if (timeToWin > 0 && ResultsManager.current?.Result == null)
+        {
+            timeToWin -= Time.deltaTime;
+            if (timeToWin <= 0) OnPlayerCollision();
+        }
+    }
+
     public void OnPlayerCollision()
     {
-        Debug.Log("xcxxzczczxczxczxc");
-        var isSuccess = levelController.IsMissionSucceeded(); 
-        Debug.Log(isSuccess);
+        var isSuccess = levelController.IsMissionSucceeded();
         if (isSuccess)
         {
-            Debug.Log("success");
             if (levelController.nextLevelSceneName != "")
             {
-                Debug.Log("new elvel");
                 SceneManager.LoadScene(levelController.nextLevelSceneName);
             }
-            else
-            {
-                // show UI
-            }
+        }
+        else
+        {
+            Debug.Log("LOST!");
+            // show UI
         }
     }
 }
