@@ -1,4 +1,5 @@
 ﻿using System;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ namespace Common
     {
         public string missionText;
         public TextMeshProUGUI text;
-        protected Inventory inventory; 
+        protected Inventory inventory;
+        [CanBeNull] public string nextLevelSceneName;
 
         private void Awake()
         {
