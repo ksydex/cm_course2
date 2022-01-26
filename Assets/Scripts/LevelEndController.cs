@@ -9,7 +9,7 @@ public class LevelEndController : MonoBehaviour
 {
     public LevelControllerBase levelController;
 
-    protected float timeToWin = 20.0f;
+    protected float timeToWin = 10.0f;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,16 +31,10 @@ public class LevelEndController : MonoBehaviour
     {
         var isSuccess = levelController.IsMissionSucceeded();
         if (isSuccess && ignoreSuccess) return;
+        ResultsManager.current!.Result = isSuccess;
 
-        if (isSuccess)
-        {
-            if (levelController.nextLevelSceneName != "")
-                SceneManager.LoadScene(levelController.nextLevelSceneName);
-        }
-        else
-        {
-            Debug.Log("LOST!");
-            // show UI
-        }
+        if (isSuccess && levelController.nextLevelSceneName != "")
+            SceneManager.LoadScene(levelController.nextLevelSceneName);
+        else SceneManager.LoadScene("EndGameScene");
     }
 }

@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using Models;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class StartGameUiManager : MonoBehaviour
 {
