@@ -1080,6 +1080,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hud
       objectReference: {fileID: 0}
+    - target: {fileID: 5894184025668106667, guid: 9f9f84a335affdc40a7ebe937c3c757d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492362598844297591, guid: 9f9f84a335affdc40a7ebe937c3c757d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f9f84a335affdc40a7ebe937c3c757d, type: 3}
 --- !u!4 &882278090 stripped
@@ -1634,6 +1642,17 @@ Transform:
   m_Father: {fileID: 1176831454}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1401763837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1749626859322566937, guid: 9f9f84a335affdc40a7ebe937c3c757d, type: 3}
+  m_PrefabInstance: {fileID: 797866432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426943783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6530012796845646445, guid: 9f9f84a335affdc40a7ebe937c3c757d, type: 3}
@@ -2081,9 +2100,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1223632479}
     - target: {fileID: 7517877954607669842, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
+      propertyPath: levelName
+      value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517877954607669842, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
       propertyPath: missionText
       value: "\u0421\u043E\u0431\u0435\u0440\u0438\u0442\u0435 3 \u044F\u0431\u043B\u043E\u043A\u0430"
       objectReference: {fileID: 0}
+    - target: {fileID: 7517877954607669842, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
+      propertyPath: levelNameText
+      value: 
+      objectReference: {fileID: 1401763837}
     - target: {fileID: 7517877954607669842, guid: 68bf7c3705804424c84bcb286710fea7, type: 3}
       propertyPath: playerController
       value: 
